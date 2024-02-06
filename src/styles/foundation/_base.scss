@@ -1,0 +1,15 @@
+@use "./global" as *;
+
+:root {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.container {
+    width: 1084px;
+    margin: 0 auto;
+
+    @include mq(md) {
+        width: 90%;
+        margin-inline: 5%;
+    }
+}

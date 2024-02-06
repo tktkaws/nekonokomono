@@ -1,0 +1,36 @@
+@use "./../foundation/global" as *;
+
+.l-header__only-top {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: 424px 1fr;
+    gap: 36px;
+
+    @include mq(md) {
+        grid-template-columns: auto;
+    }
+}
+
+.l-header__only-top__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.l-header__only-top__desc {
+    padding-top: 72px;
+    padding-left: 60px;
+    padding-right: 160px;
+    font-size: 20px;
+    color: $c-accent;
+    border-top: 1px solid $c-accent;
+    border-bottom: 1px solid $c-accent;
+
+    @include mq(md) {
+        font-size: 16px;
+        padding-top: 30px;
+        padding-bottom: 56px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
