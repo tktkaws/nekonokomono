@@ -50,7 +50,114 @@
     // width: auto;
 }
 
-// .l-nav__item>a {
-//     width: 100%;
-//     height: 100%;
-// }
+
+.l-header__nav-area {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    visibility: hidden;
+    padding-top: 60px;
+    background-color: $c-main;
+    transition: 0.4s;
+}
+
+.l-header__nav-area.-active {
+    left: 0;
+    visibility: visible;
+}
+
+.l-mobile-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+// hamburgerサンプルCSS
+
+.hamburger {
+    visibility: hidden;
+
+    @include mq(md) {
+        visibility: visible;
+    }
+
+    display: block;
+    height: 60px;
+    margin-left: auto;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    z-index: 10;
+    width: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger.-active .hamburger__line {
+    background-color: transparent;
+}
+
+.hamburger.-active .hamburger__line::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger.-active .hamburger__line::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.hamburger.-active .hamburger__text::before {
+    content: '閉じる';
+}
+
+.hamburger__line {
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    background-color: #172e59;
+    transition: 0.4s;
+}
+
+.hamburger__line:before,
+.hamburger__line:after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: #172e59;
+    transition: inherit;
+}
+
+.hamburger__line:before {
+    top: -6px;
+}
+
+.hamburger__line:after {
+    top: 6px;
+}
+
+.hamburger__text {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.hamburger__text::before {
+    content: "メニュー";
+    text-align: center;
+    color: #172e59;
+    font-size: 10px;
+    font-weight: 900;
+}
