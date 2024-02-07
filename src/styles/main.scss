@@ -3,10 +3,10 @@
 /*--------------------------------------*
  * foundation
  *--------------------------------------*/
+@use "./foundation/reset";
 @use "./foundation/base";
 @use "./foundation/color";
 // @use "./foundation/variable";
-// @use "./foundation/reset";
 // @use "./foundation/function";
 @use "./foundation/global";
 
@@ -40,7 +40,7 @@
 /*-------------------
   * project
   -------------------*/
-// @use "./object/project/home";
+@use "./object/project/p-header-image";
 // @use "./object/project/home-mv";
 // @use "./object/project/home-highlights";
 // @use "./object/project/home-nav";

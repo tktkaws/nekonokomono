@@ -1,0 +1,10 @@
+@use "../../foundation/global" as *;
+
+.p-header-image {
+    background-image: url(./images/bg_top_header.jpg);
+    height: 200px;
+
+    @include mq(sm) {
+        background-image: url(./images/bg_top_header_sp.jpg);
+    }
+}
