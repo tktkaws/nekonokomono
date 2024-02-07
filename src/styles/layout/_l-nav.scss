@@ -1,0 +1,56 @@
+@use "./../foundation/global" as *;
+
+.l-header__only-top {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: 424px 1fr;
+    gap: 36px;
+
+    @include mq(md) {
+        grid-template-columns: auto;
+    }
+}
+
+.l-nav {
+    height: 80px;
+    background-color: $c-main;
+}
+
+.l-nav__list {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding-top: 28px;
+}
+
+.l-nav__item {
+    position: relative;
+    display: flex;
+    /* Flexboxを使用して高さを揃える */
+    align-items: center;
+    /* 垂直方向に中央揃え */
+    line-height: 1.5;
+    /* テキストの高さを制御 */
+}
+
+.l-nav__item::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    /* SVGの幅に合わせる */
+    height: 24px;
+    /* SVGの高さに合わせる */
+    margin-right: 5px;
+    /* SVGとテキストの間隔を調整 */
+    background: url('./images/ico_paw.svg') no-repeat center center;
+    /* 実際のSVGのパスを指定 */
+    background-size: contain;
+    /* SVGを縮尺に合わせる */
+    // height: 100%;
+    // width: auto;
+}
+
+// .l-nav__item>a {
+//     width: 100%;
+//     height: 100%;
+// }
