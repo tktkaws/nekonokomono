@@ -47,30 +47,41 @@ const title = "nekonokomono | Top";
 			<span class="hamburger__text"></span>
 		</button>
 		<div class="l-header__nav-area js-nav-area" id="navigation">
-			<nav id="js-global-navigation" class="l-mobile-nav">
+			<nav id="js-global-navigation" class="l-mobile-nav container">
+				<div class="l-mobile-nav__logo">
+					<img
+						src="/images/logo_small.svg"
+						alt="ハンドメイド猫グッズのお店 nekonokomono"
+					/>
+				</div>
 				<ul class="l-mobile-nav__list">
-					<li class="l-mobile-nav__litem">
-						<a href="#">トップページ</a>
+					<li class="l-mobile-nav__item">
+						<a href="#"> <span>トップページ</span></a>
 					</li>
-					<li class="l-mobile-nav__litem">
+					<li class="l-mobile-nav__item">
 						<a href="#">商品一覧</a>
 					</li>
-					<li class="l-mobile-nav__litem">
+					<li class="l-mobile-nav__item">
 						<a href="#">ねこブログ</a>
 					</li>
-					<li class="l-mobile-nav__litem">
+					<li class="l-mobile-nav__item">
 						<a href="#">ねこ店員紹介</a>
 					</li>
-					<li class="l-mobile-nav__litem">
+					<li class="l-mobile-nav__item">
 						<a href="#">よくあるご質問</a>
 					</li>
-					<li class="l-mobile-nav__litem">
+					<li class="l-mobile-nav__item">
 						<a href="#">お問い合わせ</a>
 					</li>
 				</ul>
-				<p class="l-mobile-nav__link">
+				<small class="l-mobile-nav__other-link">
+					<a href="">特定商取引法に関する表記</a>
+					<span>|</span>
+					<a href="">プライバシーポリシー</a>
+				</small>
+				<!-- <p class="l-mobile-nav__link">
 					特定商取引法に関する表記 | プライバシーポリシー
-				</p>
+				</p> -->
 				<div id="js-focus-trap" tabindex="0"></div>
 			</nav>
 		</div>
