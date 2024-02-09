@@ -4,20 +4,20 @@ const title = "nekonokomono | Top";
 ---
 
 <IndexLayout title={title}>
-	<header class="l-header">
-		<div class="l-header__only-top container">
+	<header class="p-index-header">
+		<div class="p-index-header__logo-area --container">
 			<img
 				src="/images/logo_top_header.svg"
 				alt="ハンドメイド猫グッズのお店 nekonokomono"
-				class="l-header__only-top__image"
+				class="p-index-header__logo-area__logo"
 			/>
-			<p class="l-header__only-top__desc">
+			<p class="p-index-header__logo-area__desc">
 				“Queue(クー)”は、フランス語で「しっぽ」の意味です。猫にも人にも心地好いをモットーに、猫おもちゃ、雑貨を作っています。
 			</p>
 		</div>
-		<div class="p-header-image"></div>
+		<div class="p-index-header__image-area"></div>
 		<nav class="l-nav">
-			<ul class="l-nav__list container">
+			<ul class="l-nav__list">
 				<li class="l-nav__item">
 					<a href="#">商品一覧</a>
 				</li>
@@ -34,62 +34,65 @@ const title = "nekonokomono | Top";
 					<a href="#">お問い合わせ</a>
 				</li>
 			</ul>
+			<button
+				id="js-hamburger"
+				type="button"
+				class="hamburger"
+				aria-controls="navigation"
+				aria-expanded="false"
+				aria-label="メニューを開く"
+			>
+				<span class="hamburger__line"></span>
+				<span class="hamburger__text"></span>
+			</button>
+			<div class="l-mobile-nav-area js-nav-area" id="navigation">
+				<nav id="js-global-navigation" class="l-mobile-nav --container">
+					<div class="l-mobile-nav__logo">
+						<img
+							src="/images/logo_small.svg"
+							alt="ハンドメイド猫グッズのお店 nekonokomono"
+						/>
+					</div>
+					<ul class="l-mobile-nav__list">
+						<li class="l-mobile-nav__item">
+							<a href="#"> <span>トップページ</span></a>
+						</li>
+						<li class="l-mobile-nav__item">
+							<a href="#">商品一覧</a>
+						</li>
+						<li class="l-mobile-nav__item">
+							<a href="#">ねこブログ</a>
+						</li>
+						<li class="l-mobile-nav__item">
+							<a href="#">ねこ店員紹介</a>
+						</li>
+						<li class="l-mobile-nav__item">
+							<a href="#">よくあるご質問</a>
+						</li>
+						<li class="l-mobile-nav__item">
+							<a href="#">お問い合わせ</a>
+						</li>
+					</ul>
+					<small class="l-mobile-nav__other-link">
+						<a href="">特定商取引法に関する表記</a>
+						<span>|</span>
+						<a href="">プライバシーポリシー</a>
+					</small>
+					<div id="js-focus-trap" tabindex="0"></div>
+				</nav>
+			</div>
 		</nav>
-		<button
-			id="js-hamburger"
-			type="button"
-			class="hamburger"
-			aria-controls="navigation"
-			aria-expanded="false"
-			aria-label="メニューを開く"
-		>
-			<span class="hamburger__line"></span>
-			<span class="hamburger__text"></span>
-		</button>
-		<div class="l-header__nav-area js-nav-area" id="navigation">
-			<nav id="js-global-navigation" class="l-mobile-nav container">
-				<div class="l-mobile-nav__logo">
-					<img
-						src="/images/logo_small.svg"
-						alt="ハンドメイド猫グッズのお店 nekonokomono"
-					/>
-				</div>
-				<ul class="l-mobile-nav__list">
-					<li class="l-mobile-nav__item">
-						<a href="#"> <span>トップページ</span></a>
-					</li>
-					<li class="l-mobile-nav__item">
-						<a href="#">商品一覧</a>
-					</li>
-					<li class="l-mobile-nav__item">
-						<a href="#">ねこブログ</a>
-					</li>
-					<li class="l-mobile-nav__item">
-						<a href="#">ねこ店員紹介</a>
-					</li>
-					<li class="l-mobile-nav__item">
-						<a href="#">よくあるご質問</a>
-					</li>
-					<li class="l-mobile-nav__item">
-						<a href="#">お問い合わせ</a>
-					</li>
-				</ul>
-				<small class="l-mobile-nav__other-link">
-					<a href="">特定商取引法に関する表記</a>
-					<span>|</span>
-					<a href="">プライバシーポリシー</a>
-				</small>
-				<!-- <p class="l-mobile-nav__link">
-					特定商取引法に関する表記 | プライバシーポリシー
-				</p> -->
-				<div id="js-focus-trap" tabindex="0"></div>
-			</nav>
-		</div>
 	</header>
 	<main>
-		<section class="p-news"></section>
-		<section class="p-recommend"></section>
-		<section class="p-home-category"></section>
+		<section class="p-index-news --container">
+			<h2 class="c-index-heading">お知らせ</h2>
+		</section>
+		<section class="p-recommend --container">
+			<h2 class="c-index-heading">おすすめ商品</h2>
+		</section>
+		<section class="p-home-category --container">
+			<h2 class="c-index-heading">商品カテゴリー</h2>
+		</section>
 		<section class="p-home-others"></section>
 		<section class="p-home-profile"></section>
 	</main>
@@ -97,6 +100,9 @@ const title = "nekonokomono | Top";
 </IndexLayout>
 
 <style>
+	/* * {
+		outline: 1px solid magenta;
+	} */
 	main {
 		/* margin-top: 60px; */
 	}

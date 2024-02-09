@@ -1,0 +1,23 @@
+@use "../../foundation/global" as *;
+
+.c-index-heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: $c-accent;
+    position: relative;
+    border-bottom: solid 2px $c-secondary-lighter;
+    display: flex;
+    align-items: flex-end;
+    line-height: 2;
+}
+
+.c-index-heading::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 30px;
+    height: 67px;
+    left: -48px;
+    background-image: url(./images/ico_cat.svg);
+    background-size: cover;
+}
