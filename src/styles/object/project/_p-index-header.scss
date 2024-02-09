@@ -1,0 +1,65 @@
+@use "../../foundation/global" as *;
+
+.p-index-header__image-area {
+    background-image: url(./images/bg_top_header.jpg);
+    height: 200px;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        background-image: url(./images/bg_top_header_sp.jpg);
+    }
+}
+
+.p-index-header {
+    width: 100%;
+}
+
+.p-index-header__logo-area {
+    display: grid;
+    grid-template-columns: 424px 624px;
+    gap: 36px;
+
+    @media screen and (max-width: 1084px) {
+        grid-template-columns: 38% 58%;
+        gap: 4%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: auto;
+        gap: 0;
+    }
+}
+
+.p-index-header__logo-area__logo {
+    width: 100%;
+}
+
+.p-index-header__logo-area__desc {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    padding-top: 72px;
+    padding-left: 60px;
+    padding-right: 160px;
+    font-size: 20px;
+    color: $c-accent;
+    border-top: 1px solid $c-accent;
+    border-bottom: 1px solid $c-accent;
+
+    @media screen and (max-width: 1084px) {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
+        font-size: 16px;
+        padding-top: 1rem;
+        padding-inline: 0;
+    }
+
+}

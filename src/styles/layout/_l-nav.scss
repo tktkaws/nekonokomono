@@ -1,19 +1,12 @@
 @use "./../foundation/global" as *;
 
-.l-header__only-top {
-    // width: 100%;
-    display: grid;
-    grid-template-columns: 424px 1fr;
-    gap: 36px;
-
-    @include mq(md) {
-        grid-template-columns: auto;
-    }
-}
-
 .l-nav {
     height: 80px;
     background-color: $c-main;
+
+    @media screen and (max-width: 768px) {
+        height: 30px;
+    }
 }
 
 .l-nav__list {
@@ -21,37 +14,36 @@
     gap: 50px;
     justify-content: center;
     padding-top: 28px;
+
+    @media screen and (max-width: 1084px) {
+        gap: 2em;
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+        visibility: hidden;
+    }
 }
 
 .l-nav__item {
     position: relative;
     display: flex;
-    /* Flexboxを使用して高さを揃える */
     align-items: center;
-    /* 垂直方向に中央揃え */
     line-height: 1.5;
-    /* テキストの高さを制御 */
 }
 
 .l-nav__item::before {
     content: "";
     display: inline-block;
     width: 24px;
-    /* SVGの幅に合わせる */
     height: 24px;
-    /* SVGの高さに合わせる */
     margin-right: 5px;
-    /* SVGとテキストの間隔を調整 */
     background: url('./images/ico_paw.svg') no-repeat center center;
-    /* 実際のSVGのパスを指定 */
     background-size: contain;
-    /* SVGを縮尺に合わせる */
-    // height: 100%;
-    // width: auto;
 }
 
 
-.l-header__nav-area {
+.l-mobile-nav-area {
     position: fixed;
     top: 0;
     left: -100%;
@@ -64,24 +56,22 @@
     transition: 0.4s;
 }
 
-.l-header__nav-area.-active {
+.l-mobile-nav-area.-active {
     left: 0;
     visibility: visible;
 }
 
-.l-mobile-nav {
+.l-mobile-nav-area {
     display: flex;
     flex-direction: column;
 }
 
-
-
-// hamburgerサンプルCSS
+// hamburgerボタン
 
 .hamburger {
     visibility: hidden;
 
-    @include mq(md) {
+    @media screen and (max-width: 768px) {
         visibility: visible;
     }
 
@@ -162,7 +152,6 @@
     font-weight: 900;
 }
 
-
 // l-mobile-nav
 .l-mobile-nav__logo {
     display: flex;
@@ -198,7 +187,6 @@
     align-items: center;
 }
 
-
 .l-mobile-nav__other-link {
     margin-top: 45px;
     font-size: 12px;
@@ -206,17 +194,3 @@
     justify-content: center;
     gap: 10px;
 }
-
-// .l-mobile-nav__other-link>a:first-child {
-//     position: relative;
-// }
-
-// .l-mobile-nav__other-link>a:first-child::after {
-//     content: "";
-//     display: block;
-//     width: 1px;
-//     height: 10px;
-//     background-color: $c-accent;
-//     position: absolute;
-//     right: -10px;
-// }

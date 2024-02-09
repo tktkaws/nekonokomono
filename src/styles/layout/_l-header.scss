@@ -1,13 +1,14 @@
 @use "./../foundation/global" as *;
 
 .l-header__only-top {
-    // width: 100%;
+    width: 100%;
+    overflow-x: hidden;
     display: grid;
     grid-template-columns: 424px 1fr;
     gap: 36px;
 
     @include mq(md) {
-        grid-template-columns: auto;
+        width: 500px;
     }
 }
 
@@ -18,9 +19,9 @@
 }
 
 .l-header__only-top__desc {
-    padding-top: 72px;
-    padding-left: 60px;
-    padding-right: 160px;
+    // padding-top: 72px;
+    // padding-left: 60px;
+    // padding-right: 160px;
     font-size: 20px;
     color: $c-accent;
     border-top: 1px solid $c-accent;

@@ -5,18 +5,12 @@
     font-size: 20px;
 }
 
+body {
+    // overflow-x: hidden;
+}
+
 img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.container {
-    width: 1084px;
-    margin: 0 auto;
-
-    @include mq(md) {
-        width: 90%;
-        margin-inline: 5%;
-    }
 }

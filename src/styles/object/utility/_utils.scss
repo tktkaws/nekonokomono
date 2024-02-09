@@ -1,0 +1,17 @@
+@use "../../foundation/global" as *;
+
+.--container {
+    width: 1084px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1084px) {
+        width: 90%;
+        margin-inline: 5%;
+    }
+
+    // @include mq(md) {
+    //     width: 90%;
+    //     width: max(90%, 1084px);
+    //     margin-inline: 5%;
+    // }
+}

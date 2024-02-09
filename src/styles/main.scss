@@ -41,7 +41,7 @@
 /*-------------------
   * project
   -------------------*/
-@use "./object/project/p-header-image";
+@use "./object/project/p-index-header";
 // @use "./object/project/home-mv";
 // @use "./object/project/home-highlights";
 // @use "./object/project/home-nav";
@@ -53,7 +53,8 @@
 /*-------------------
   * utility
   -------------------*/
-// @use "./object/utility/display";
+@use "./object/utility/utils";
+
 /*-------------------
   * lib
   -------------------*/
