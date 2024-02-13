@@ -27,7 +27,8 @@
 /*-------------------
 * component
 -------------------*/
-// @use "./object/component/button";
+@use "./object/component/c-index-heading";
+@use "./object/component/c-button";
 // @use "./object/component/text-loop";
 // @use "./object/component/slide";
 // @use "./object/component/block";
@@ -42,6 +43,7 @@
   * project
   -------------------*/
 @use "./object/project/p-index-header";
+@use "./object/project/p-index-news";
 // @use "./object/project/home-mv";
 // @use "./object/project/home-highlights";
 // @use "./object/project/home-nav";

@@ -1,0 +1,21 @@
+@use "../../foundation/global" as *;
+
+.c-button-black {
+    display: block;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: $c-accent;
+    color: $c-base;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.c-button-black:hover {
+    background-color: $c-secondary-lighter;
+    color: $c-base;
+}
