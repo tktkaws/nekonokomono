@@ -13,6 +13,12 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 1084px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
     @media screen and (max-width: 768px) {
         margin-top: 20px;
     }
@@ -25,6 +31,26 @@
     padding-bottom: 20px;
     padding-inline: 15px;
     border: solid 1px $c-gray;
+    display: grid;
+    grid-template-rows: 190px auto 1fr 44px 44px;
+    overflow: hidden;
+}
+
+.p-recommend__card.--new {
+    position: relative;
+
+    &::before {
+        content: "新商品";
+        position: absolute;
+        top: 15px;
+        left: -45px;
+        background-color: $c-primary;
+        color: $c-base;
+        padding: 5px 60px;
+        font-size: 14px;
+        font-weight: bold;
+        rotate: -45deg;
+    }
 }
 
 .p-recommend__card-image {
@@ -46,7 +72,8 @@
 }
 
 .p-recommend__card-price {
-    margin-top: 25px;
+    margin-top: 12px;
+    height: 22px;
     text-align: right;
     margin-right: 40px;
     position: relative;
@@ -74,7 +101,7 @@
 }
 
 .p-recommend__card-link {
-    margin-top: 10px;
+    // margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
