@@ -1,0 +1,47 @@
+@use "../../foundation/global" as *;
+
+.p-index-category {
+    padding-top: 100px;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 80px;
+    }
+}
+
+.p-index-category__list {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1084px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 20px;
+    }
+}
+
+.p-index-category__item {
+    width: 348px;
+    height: 120px;
+    border: solid 1px $c-gray;
+}
+
+.p-index-category__item>a {
+    display: flex;
+}
+
+.p-index-category__item-image {
+    width: 120px;
+    height: 120px;
+}
+
+.p-index-category__item-text {
+    padding-top: 48px;
+    padding-left: 20px;
+    font-size: 18px;
+}
