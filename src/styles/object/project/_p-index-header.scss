@@ -1,20 +1,19 @@
 @use "../../foundation/global" as *;
 
-.p-index-header__image-area {
-    background-image: url(./images/bg_top_header.jpg);
-    height: 200px;
-    width: 100%;
+.p-index-header__logo-area {
+    display: grid;
+    grid-template-columns: 1fr 1084px 1fr;
 
-    @media screen and (max-width: 768px) {
-        background-image: url(./images/bg_top_header_sp.jpg);
+    @media only screen and (max-width: 1184px) {
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    &>* {
+        grid-column: 2;
     }
 }
 
-.p-index-header {
-    width: 100%;
-}
-
-.p-index-header__logo-area {
+.p-index-header__logo-area__container {
     display: grid;
     grid-template-columns: 424px 624px;
     gap: 36px;
@@ -31,6 +30,21 @@
         gap: 0;
     }
 }
+
+.p-index-header__image-area {
+    background-image: url(./images/bg_top_header.jpg);
+    height: 200px;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        background-image: url(./images/bg_top_header_sp.jpg);
+    }
+}
+
+.p-index-header {
+    width: 100%;
+}
+
 
 .p-index-header__logo-area__logo {
     width: 100%;

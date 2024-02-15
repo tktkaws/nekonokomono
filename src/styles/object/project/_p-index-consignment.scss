@@ -1,13 +1,21 @@
 @use "../../foundation/global" as *;
 
 .p-index-consignment {
+    display: grid;
+    grid-template-columns: 1fr 1084px 1fr;
+
+    @media only screen and (max-width: 1184px) {
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    &>* {
+        grid-column: 2;
+    }
+
     margin-top: 100px;
     padding-top: 94px;
     padding-bottom: 100px;
     background-color: $c-main;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     @media screen and (max-width: 768px) {
         margin-top: 80px;
@@ -15,13 +23,13 @@
     }
 }
 
-.p-index-consignment__container {
-    width: 1084px;
+// .p-index-consignment__container {
+//     width: 1084px;
 
-    @media screen and (max-width: 1184px) {
-        width: 90%;
-    }
-}
+//     @media screen and (max-width: 1184px) {
+//         width: 90%;
+//     }
+// }
 
 .p-index-consignment__heading {
     font-size: 30px;

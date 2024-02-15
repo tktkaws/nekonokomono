@@ -15,6 +15,7 @@
 *--------------------------------------*/
 @use "./layout/l-header";
 @use "./layout/l-nav";
+@use "./layout/l-footer";
 // @use "./layout/footer";
 // @use "./layout/hero";
 // @use "./layout/nav";
@@ -44,8 +45,10 @@
   -------------------*/
 @use "./object/project/p-index-header";
 @use "./object/project/p-index-news";
-@use "./object/project/p-recommend";
+@use "./object/project/p-index-recommend";
 @use "./object/project/p-index-category";
+@use "./object/project/p-index-consignment";
+@use "./object/project/p-index-profile";
 // @use "./object/project/home-mv";
 // @use "./object/project/home-highlights";
 // @use "./object/project/home-nav";
