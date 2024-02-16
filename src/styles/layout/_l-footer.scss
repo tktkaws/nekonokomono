@@ -3,14 +3,15 @@
 .l-footer {
     display: grid;
     grid-template-columns: 1fr 1084px 1fr;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: $c-accent;
-    color: $c-base;
 
     @media only screen and (max-width: 1184px) {
         grid-template-columns: 1fr 90% 1fr;
     }
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $c-accent;
+    color: $c-base;
 }
 
 .l-footer>* {
