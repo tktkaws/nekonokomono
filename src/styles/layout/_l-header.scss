@@ -9,12 +9,12 @@
     }
 }
 
-
-
 .l-header__logo-bg-image {
     position: relative;
     grid-row: 1;
     grid-column: 1;
+    height: 100%;
+    height: 200px;
 }
 
 .l-header__logo-bg-image::before {
@@ -25,6 +25,11 @@
     bottom: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.l-header__logo-bg-image>img {
+    // height: 200px;
+    height: 100%;
 }
 
 .l-header__logo>img {
