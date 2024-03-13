@@ -32,13 +32,30 @@
     line-height: 1.5;
 }
 
+
+
 .l-nav__item::before {
     content: "";
     display: inline-block;
     width: 24px;
     height: 24px;
     margin-right: 5px;
-    background: url('./images/ico_paw.svg') no-repeat center center;
+    background: url('/images/ico_paw.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.l-nav__item.active {
+    font-weight: bold;
+    color: $c-secondary;
+}
+
+.l-nav__item.active::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    background: url('/images/ico_paw_o.svg') no-repeat center center;
     background-size: contain;
 }
 

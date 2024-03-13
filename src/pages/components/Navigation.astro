@@ -1,0 +1,172 @@
+---
+const currentUrl = Astro.url.pathname;
+const links = [
+    { url: "/productIndex/", title: "商品一覧" },
+    { url: "/blogIndex/", title: "ねこブログ" },
+    { url: "/catStaff/", title: "ねこ店員紹介" },
+    { url: "/faq/", title: "よくあるご質問" },
+    { url: "/contact/", title: "お問い合わせ" },
+];
+---
+
+<nav class="l-nav">
+    <ul class="l-nav__list">
+        {
+            links.map((link, index) => {
+                return (
+                    <li
+                        class={
+                            currentUrl == link.url
+                                ? "l-nav__item active"
+                                : "l-nav__item"
+                        }
+                    >
+                        <a href={link.url}>{link.title}</a>
+                    </li>
+                );
+            })
+        }
+    </ul>
+    <button
+        id="js-hamburger"
+        type="button"
+        class="hamburger"
+        aria-controls="navigation"
+        aria-expanded="false"
+        aria-label="メニューを開く"
+    >
+        <span class="hamburger__line"></span>
+        <span class="hamburger__text"></span>
+    </button>
+    <div class="l-mobile-nav-area js-nav-area" id="navigation">
+        <nav id="js-global-navigation" class="l-mobile-nav --container">
+            <div class="l-mobile-nav__logo">
+                <img
+                    src="/images/logo_small.svg"
+                    alt="ハンドメイド猫グッズのお店 nekonokomono"
+                />
+            </div>
+            <ul class="l-mobile-nav__list">
+                <li class="l-mobile-nav__item">
+                    <a href="#"> <span>トップページ</span></a>
+                </li>
+                <li class="l-mobile-nav__item">
+                    <a href="#">商品一覧</a>
+                </li>
+                <li class="l-mobile-nav__item">
+                    <a href="#">ねこブログ</a>
+                </li>
+                <li class="l-mobile-nav__item">
+                    <a href="#">ねこ店員紹介</a>
+                </li>
+                <li class="l-mobile-nav__item">
+                    <a href="#">よくあるご質問</a>
+                </li>
+                <li class="l-mobile-nav__item">
+                    <a href="#">お問い合わせ</a>
+                </li>
+            </ul>
+            <small class="l-mobile-nav__other-link">
+                <a href="">特定商取引法に関する表記</a>
+                <span>|</span>
+                <a href="">プライバシーポリシー</a>
+            </small>
+            <div id="js-focus-trap" tabindex="0"></div>
+        </nav>
+    </div>
+</nav>
+
+<script>
+    // メニュー展開時に背景を固定
+    const backgroundFix = (bool) => {
+        const scrollingElement = () => {
+            const browser = window.navigator.userAgent.toLowerCase();
+            if ("scrollingElement" in document)
+                return document.scrollingElement;
+            return document.documentElement;
+        };
+
+        const scrollY = bool
+            ? scrollingElement().scrollTop
+            : parseInt(document.body.style.top || "0");
+
+        const fixedStyles = {
+            height: "100vh",
+            position: "fixed",
+            top: `${scrollY * -1}px`,
+            left: "0",
+            width: "100vw",
+        };
+
+        Object.keys(fixedStyles).forEach((key) => {
+            document.body.style[key] = bool ? fixedStyles[key] : "";
+        });
+
+        if (!bool) {
+            window.scrollTo(0, scrollY * -1);
+        }
+    };
+
+    // 変数定義
+    const CLASS = "-active";
+    let flg = false;
+    let accordionFlg = false;
+
+    let hamburger = document.getElementById("js-hamburger");
+    let focusTrap = document.getElementById("js-focus-trap");
+    let menu = document.querySelector(".js-nav-area");
+    let accordionTrigger = document.querySelectorAll(
+        ".js-sp-accordion-trigger",
+    );
+    let accordion = document.querySelectorAll(".js-sp-accordion");
+
+    // メニュー開閉制御
+    hamburger.addEventListener("click", (e) => {
+        //ハンバーガーボタンが選択されたら
+        e.currentTarget.classList.toggle(CLASS);
+        menu.classList.toggle(CLASS);
+        if (flg) {
+            // flgの状態で制御内容を切り替え
+            backgroundFix(false);
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.focus();
+            flg = false;
+        } else {
+            backgroundFix(true);
+            hamburger.setAttribute("aria-expanded", "true");
+            flg = true;
+        }
+    });
+    window.addEventListener("keydown", () => {
+        //escキー押下でメニューを閉じられるように
+        if (event.key === "Escape") {
+            hamburger.classList.remove(CLASS);
+            menu.classList.remove(CLASS);
+
+            backgroundFix(false);
+            hamburger.focus();
+            hamburger.setAttribute("aria-expanded", "false");
+            flg = false;
+        }
+    });
+
+    // メニュー内アコーディオン制御
+    accordionTrigger.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.currentTarget.classList.toggle(CLASS);
+            e.currentTarget.nextElementSibling.classList.toggle(CLASS);
+            if (accordionFlg) {
+                e.currentTarget.setAttribute("aria-expanded", "false");
+                accordionFlg = false;
+            } else {
+                e.currentTarget.setAttribute("aria-expanded", "true");
+                accordionFlg = true;
+            }
+        });
+    });
+
+    // フォーカストラップ制御
+    focusTrap.addEventListener("focus", (e) => {
+        hamburger.focus();
+    });
+</script>
