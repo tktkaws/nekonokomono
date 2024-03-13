@@ -1,0 +1,9 @@
+---
+import Heading from "./components/Heading.astro";
+const { ja, en } = Astro.props;
+---
+
+<div class="l-heading">
+    <h1 class="l-heading__ja">{ja}</h1>
+    <p class="l-heading__en">{en}</p>
+</div>

@@ -1,0 +1,32 @@
+@use "./../foundation/global" as *;
+
+.l-heading {
+    margin-top: 73px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-heading::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 48px;
+    background-image: url("/images/ico_paw02.svg");
+}
+
+.l-heading__ja {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.l-heading__en {
+    font-size: 20px;
+    font-weight: bold;
+    color: $c-secondary-lighter;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
