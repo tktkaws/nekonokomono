@@ -1,0 +1,14 @@
+---
+const { title } = Astro.props;
+---
+
+<section class="l-breadcrumb">
+    <ul class="l-breadcrumb__list">
+        <li class="l-breadcrumb__item-top">
+            <a href="/">ホーム</a>
+        </li>
+        <li class="l-breadcrumb__item-sub">
+            {title}
+        </li>
+    </ul>
+</section>

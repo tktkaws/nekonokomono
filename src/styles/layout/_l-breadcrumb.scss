@@ -1,0 +1,31 @@
+@use "./../foundation/global" as *;
+
+.l-breadcrumb {
+    display: grid;
+    grid-template-columns: 1fr 1084px 1fr;
+
+    @media only screen and (max-width: 1184px) {
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    &>* {
+        grid-column: 2;
+    }
+}
+
+.l-breadcrumb__list {
+    margin-top: 10px;
+    display: flex;
+    font-size: 12px;
+}
+
+.l-breadcrumb__item-top {
+    text-decoration: underline;
+}
+
+.l-breadcrumb__item-sub {}
+
+.l-breadcrumb__item-sub::before {
+    content: ">";
+    margin-inline: 0.5rem;
+}
