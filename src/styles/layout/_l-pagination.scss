@@ -1,0 +1,87 @@
+@use "./../foundation/global" as *;
+
+.l-pagination {
+    display: grid;
+    grid-template-columns: 1fr 1084px 1fr;
+    padding-bottom: 100px;
+
+    @media only screen and (max-width: 1184px) {
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    &>* {
+        grid-column: 2;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 80px;
+    }
+}
+
+.l-pagination__list {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.l-pagination__prev,
+.l-pagination__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: $c-main;
+    width: 103px;
+    height: 50px;
+}
+
+.l-pagination__prev::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(45deg);
+}
+
+.l-pagination__next::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    transform: rotate(45deg);
+}
+
+.l-pagination__item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: $c-main;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.l-pagination__item.active {
+    background-color: $c-secondary-lighter;
+    color: #fff;
+}
+
+.l-pagination__dots {
+    width: 14px;
+    height: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+}
