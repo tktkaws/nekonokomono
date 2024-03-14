@@ -1,0 +1,48 @@
+@use "./../foundation/global" as *;
+
+.l-tab-area {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1084px 1fr;
+
+    @media only screen and (max-width: 1184px) {
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    &>* {
+        grid-column: 2;
+    }
+}
+
+.tab-list {
+    display: flex;
+    column-gap: 3px;
+    justify-content: space-between;
+    border-bottom: solid 5px $c-secondary-lighter;
+}
+
+.tab {
+    cursor: pointer;
+    background-color: $c-main;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 178px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.tab.-active {
+    background-color: $c-secondary-lighter;
+    color: #fff;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.-active {
+    display: block;
+}

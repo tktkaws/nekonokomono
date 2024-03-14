@@ -1,16 +1,379 @@
 ---
 import Layout from "./layouts/Layout.astro";
-const title = "nekonokomono | Top";
+import Heading from "./components/Heading.astro";
+import Breadcrumb from "./components/Breadcrumb.astro";
+
+const title = "nekonokomono | 商品一覧";
+const pageTitle = "商品一覧";
 ---
 
 <Layout title={title}>
+	<Breadcrumb title={pageTitle} />
 	<main>
-		<h1>{title}</h1>
+		<Heading ja={pageTitle} en="products" />
+		<div class="l-tab-area">
+			<!-- <h2 id="tablist-label">タブ見本項目一覧</h2> -->
+			<div
+				class="tab-list"
+				role="tablist"
+				aria-labelledby="tablist-label"
+			>
+				<button
+					class="tab -active js-tab"
+					type="button"
+					role="tab"
+					id="tab1"
+					aria-controls="tab-panel1"
+					aria-selected="true">すべて</button
+				>
+				<button
+					class="tab js-tab"
+					type="button"
+					role="tab"
+					id="tab2"
+					aria-controls="tab-panel2"
+					aria-selected="false"
+					tabindex="-1">レジンブローチ</button
+				>
+				<button
+					class="tab js-tab"
+					type="button"
+					role="tab"
+					id="tab3"
+					aria-controls="tab-panel3"
+					aria-selected="false"
+					tabindex="-1">猫用首輪</button
+				>
+				<button
+					class="tab js-tab"
+					type="button"
+					role="tab"
+					id="tab3"
+					aria-controls="tab-panel4"
+					aria-selected="false"
+					tabindex="-1">けりぐるみ</button
+				>
+				<button
+					class="tab js-tab"
+					type="button"
+					role="tab"
+					id="tab3"
+					aria-controls="tab-panel5"
+					aria-selected="false"
+					tabindex="-1">アクセサリー</button
+				>
+				<button
+					class="tab js-tab"
+					type="button"
+					role="tab"
+					id="tab3"
+					aria-controls="tab-panel6"
+					aria-selected="false"
+					tabindex="-1">その他雑貨</button
+				>
+			</div>
+			<div
+				id="tab-panel1"
+				class="tab-panel js-tab-panel -active"
+				role="tabpanel"
+				tabindex="0"
+				aria-labelledby="tab1"
+			>
+				<ul class="p-index-recommend__list">
+					<li class="p-index-recommend__card --new">
+						<a href="#">
+							<img
+								src="/images/dmy_pd001.jpg"
+								alt="【焼印付】爪とぎ型キーホルダー"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							【焼印付】爪とぎ型キーホルダー
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							可愛らしいミニチュアサイズの「猫の爪とぎ」型キーホルダー。木製ケースの裏面には猫シルエットの焼印付きでオシャレ！
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd002.jpg"
+								alt="【肉球ブローチ（7個セット）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							【肉球ブローチ（7個セット）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							定番の肉球型のレジンブローチ（7個セット）です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd003.jpg"
+								alt="レース猫首輪（鈴付き）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							レース猫首輪（鈴付き）レース猫首輪（鈴付き）レース猫首輪（鈴付き）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd002.jpg"
+								alt="【肉球ブローチ（7個セット）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							【肉球ブローチ（7個セット）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							定番の肉球型のレジンブローチ（7個セット）です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd003.jpg"
+								alt="レース猫首輪（鈴付き）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							レース猫首輪（鈴付き）レース猫首輪（鈴付き）レース猫首輪（鈴付き）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd002.jpg"
+								alt="【肉球ブローチ（7個セット）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							【肉球ブローチ（7個セット）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							定番の肉球型のレジンブローチ（7個セット）です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd003.jpg"
+								alt="レース猫首輪（鈴付き）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							レース猫首輪（鈴付き）レース猫首輪（鈴付き）レース猫首輪（鈴付き）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd002.jpg"
+								alt="【肉球ブローチ（7個セット）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							【肉球ブローチ（7個セット）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							定番の肉球型のレジンブローチ（7個セット）です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+					<li class="p-index-recommend__card">
+						<a href="#">
+							<img
+								src="/images/dmy_pd003.jpg"
+								alt="レース猫首輪（鈴付き）"
+								class="p-index-recommend__card-image"
+							/>
+						</a>
+						<h3 class="p-index-recommend__card-heading">
+							レース猫首輪（鈴付き）レース猫首輪（鈴付き）レース猫首輪（鈴付き）
+						</h3>
+						<p class="p-index-recommend__card-desc">
+							アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。
+						</p>
+						<p class="p-index-recommend__card-price">000</p>
+						<a href="#" class="p-index-recommend__card-link"
+							><span> 詳細を見る</span></a
+						>
+					</li>
+				</ul>
+			</div>
+			<div
+				id="tab-panel2"
+				class="tab-panel js-tab-panel"
+				role="tabpanel"
+				tabindex="0"
+				aria-labelledby="tab2"
+			>
+				<p>タブパネル2の内容</p>
+			</div>
+			<div
+				id="tab-panel3"
+				class="tab-panel js-tab-panel"
+				role="tabpanel"
+				tabindex="0"
+				aria-labelledby="tab3"
+			>
+				<p>タブパネル3の内容</p>
+			</div>
+			<div
+				id="tab-panel4"
+				class="tab-panel js-tab-panel"
+				role="tabpanel"
+				tabindex="0"
+				aria-labelledby="tab4"
+			>
+				<p>タブパネル4の内容</p>
+			</div>
+			<div
+				id="tab-panel5"
+				class="tab-panel js-tab-panel"
+				role="tabpanel"
+				tabindex="0"
+				aria-labelledby="tab5"
+			>
+				<p>タブパネル5の内容</p>
+			</div>
+			<div
+				id="tab-panel6"
+				class="tab-panel js-tab-panel"
+				role="tabpanel"
+				tabindex="0"
+				aria-labelledby="tab6"
+			>
+				<p>タブパネル6の内容</p>
+			</div>
+		</div>
 	</main>
 </Layout>
 
-<style>
-	main {
-		margin-top: 60px;
+<script>
+	const tabs = document.querySelectorAll(".js-tab");
+	function tabSwitch() {
+		let tabsArray = Array.prototype.slice.call(tabs);
+		let index = tabsArray.indexOf(this);
+		const resetTab = function () {
+			document
+				.querySelector(".js-tab.-active")
+				.classList.remove("-active");
+			document
+				.querySelector(".js-tab[aria-selected=true]")
+				.removeAttribute("aria-selected");
+			document.querySelectorAll(".js-tab").forEach((elm) => {
+				elm.tabIndex = -1;
+			});
+			document
+				.querySelector(".js-tab-panel.-active")
+				.classList.remove("-active");
+		};
+		const setTab = function (tab, tabpanel) {
+			tab.classList.add("-active");
+			tab.tabIndex = 0;
+			tab.setAttribute("aria-selected", true);
+			tabpanel.classList.add("-active");
+		};
+		if (event.type == "keyup") {
+			if (event.key === "ArrowRight") {
+				if (tabsArray[index + 1]) {
+					tabsArray[index + 1].focus();
+					resetTab();
+					setTab(
+						tabsArray[index + 1],
+						document.querySelectorAll(".js-tab-panel")[index + 1],
+					);
+				} else {
+					tabsArray[0].focus();
+					resetTab();
+					setTab(
+						tabsArray[0],
+						document.querySelectorAll(".js-tab-panel")[0],
+					);
+				}
+			}
+			if (event.key === "ArrowLeft") {
+				if (tabsArray[index - 1]) {
+					tabsArray[index - 1].focus();
+					resetTab();
+					setTab(
+						tabsArray[index - 1],
+						document.querySelectorAll(".js-tab-panel")[index - 1],
+					);
+				} else {
+					let lastTab = tabsArray.pop();
+					lastTab.focus();
+					resetTab();
+					setTab(
+						lastTab,
+						Array.prototype.slice
+							.call(document.querySelectorAll(".js-tab-panel"))
+							.pop(),
+					);
+				}
+			}
+		}
+		if (event.type == "click") {
+			resetTab();
+			setTab(this, document.querySelectorAll(".js-tab-panel")[index]);
+		}
 	}
-</style>
+
+	tabs.forEach((tab) => {
+		tab.addEventListener("click", tabSwitch);
+		tab.addEventListener("keyup", tabSwitch);
+	});
+</script>
