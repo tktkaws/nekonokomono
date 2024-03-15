@@ -1,16 +1,71 @@
 ---
 import Layout from "./layouts/Layout.astro";
-const title = "nekonokomono | Top";
+import Breadcrumb from "./components/Breadcrumb.astro";
+
+const title = "nekonokomono | 【焼印付】爪とぎ型キーホルダー";
+const pageTitle = "【焼印付】爪とぎ型キーホルダー";
 ---
 
 <Layout title={title}>
+	<Breadcrumb title={pageTitle} />
 	<main>
-		<h1>{title}</h1>
+		<article>
+			<section class="p-product-info">
+				<div class="p-product-info__inner">
+					<div class="p-product-info__image-container">
+						<!-- メイン画像 -->
+						<img
+							class="main-image"
+							id="mainImage"
+							src="/images_cms/cart/dmy_pd001.jpg"
+							alt="Main Image"
+						/>
+
+						<!-- サムネイル画像 -->
+						<img
+							class="thumbnail"
+							src="/images_cms/cart/dmy_pd001.jpg"
+							alt="Thumbnail 1"
+						/>
+						<img
+							class="thumbnail"
+							src="/images_cms/cart/dmy_pd002.jpg"
+							alt="Thumbnail 2"
+						/>
+						<img
+							class="thumbnail"
+							src="/images_cms/cart/dmy_pd003.jpg"
+							alt="Thumbnail 3"
+						/>
+					</div>
+
+					<div class="p-product-info__cart">
+						<h2>【焼印付】爪とぎ型キーホルダー</h2>
+					</div>
+				</div>
+			</section>
+			<section class="p-product-article"></section>
+		</article>
+		<aside>
+			<div class="p-product-other-carts"></div>
+			<div class="p-product-pagination"></div>
+		</aside>
 	</main>
 </Layout>
 
-<style>
-	main {
-		margin-top: 60px;
-	}
-</style>
+<script>
+	// サムネイル画像の要素を取得
+	const thumbnails = document.querySelectorAll(".thumbnail");
+
+	// メイン画像の要素を取得
+	const mainImage = document.getElementById("mainImage");
+
+	// サムネイル画像にクリックイベントを追加
+	thumbnails.forEach((thumbnail) => {
+		thumbnail.addEventListener("click", function () {
+			// クリックされたサムネイルのsrc属性を取得して、メイン画像のsrc属性に反映
+			const thumbnailSrc = this.getAttribute("src");
+			mainImage.setAttribute("src", thumbnailSrc);
+		});
+	});
+</script>
