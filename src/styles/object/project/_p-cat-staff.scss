@@ -1,0 +1,128 @@
+@use "../../foundation/global" as *;
+
+.p-cat-staff {
+    margin-top: 8vw;
+    margin-bottom: 9.3vw;
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 25vw;
+        margin-bottom: 26vw;
+    }
+}
+
+.p-cat-staff-card-list {
+    display: flex;
+    gap: 6.2vw;
+    flex-direction: column;
+}
+
+.p-cat-staff-card {
+    display: grid;
+    grid-template-columns: 1fr 544px 540px 1fr;
+    grid-template-columns: 1fr 34vw 33.7vw 1fr;
+
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: 5.3vw 1fr 5.3vw;
+    }
+}
+
+.p-cat-staff-card::before {
+    content: "";
+    display: block;
+    grid-row: 1;
+    grid-column: 2/4;
+    background-color: $c-main;
+    width: 100%;
+    height: 520px;
+    height: 32.5vw;
+
+    // height: max(32.5vw, 520px);
+    @media only screen and (max-width: 768px) {
+        grid-row: 2;
+        grid-column: 2/-1;
+        height: 62.6vw;
+        height: min(62.6vw, 300px);
+    }
+}
+
+.p-cat-staff-card__image {
+    grid-row: 1;
+    grid-column: 1/3;
+    aspect-ratio: 800/500;
+    margin-top: -3vw;
+
+    @media only screen and (max-width: 768px) {
+        grid-row: 1;
+        grid-column: 1/-1;
+    }
+}
+
+.p-cat-staff-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-cat-staff-card__text {
+    grid-row: 1;
+    grid-column: 3/3;
+    padding-inline: 2.5vw;
+
+    @media only screen and (max-width: 768px) {
+        grid-row: 2;
+        grid-column: 2/2;
+        padding-inline: 5vw;
+    }
+}
+
+.p-cat-staff-card__heading {
+    margin-top: 7.5vw;
+    font-weight: bold;
+    font-size: 30px;
+    font-size: 1.8vw;
+    font-size: max(1.8vw, 20px);
+    border-bottom: dotted 2px;
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 5vw;
+    }
+}
+
+.p-cat-staff-card__desc {
+    margin-top: 2.5vw;
+    font-size: 20px;
+    font-size: 1.2vw;
+    font-size: max(1.2vw, 16px);
+    line-height: 1.8;
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 5.3vw;
+    }
+}
+
+
+.p-cat-staff-card__image.image-right {
+    grid-column: 3/5;
+
+    @media only screen and (max-width: 768px) {
+        grid-row: 1;
+        grid-column: 1/-1;
+    }
+}
+
+.p-cat-staff-card__text.image-right {
+    grid-column: 2/2;
+
+    @media only screen and (max-width: 768px) {
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+}
+
+
+.p-cat-staff-card.image-right::before {
+    @media only screen and (max-width: 768px) {
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+}

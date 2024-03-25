@@ -1,16 +1,49 @@
 ---
 import Layout from "./layouts/Layout.astro";
-const title = "nekonokomono | Top";
+import Heading from "./components/Heading.astro";
+const title = "nekonokomono | ねこ店員紹介";
 ---
 
 <Layout title={title}>
 	<main>
-		<h1>{title}</h1>
+		<Heading
+			ja="ねこ店員紹介"
+			en="cat staff"
+			sub01="当店の優秀な（？）ねこ店員さんたちを紹介します。"
+			sub02="店員さんの日々の活動はねこブログにて不定期に報告しております。よろしければそちらもご覧ください♪"
+		/>
+		<section class="p-cat-staff">
+			<ul class="p-cat-staff-card-list">
+				<li class="p-cat-staff-card">
+					<div class="p-cat-staff-card__image">
+						<img src="/images/img_staff_anzu.jpg" alt="" />
+					</div>
+					<div class="p-cat-staff-card__text">
+						<h3 class="p-cat-staff-card__heading">
+							あんずセンパイ
+						</h3>
+						<p class="p-cat-staff-card__desc">
+							ふわふわ系女子。
+							控えめに見えて実は要求が通るまで一歩も惹かない強情な性格。後輩に指導を試みてよく返り討ちに遭っている。
+						</p>
+					</div>
+				</li>
+				<li class="p-cat-staff-card image-right">
+					<div class="p-cat-staff-card__image image-right">
+						<img src="/images/img_staff_chamame.jpg" alt="" />
+					</div>
+					<div class="p-cat-staff-card__text image-right">
+						<h3 class="p-cat-staff-card__heading">
+							ちゃまめコウハイ
+						</h3>
+						<p class="p-cat-staff-card__desc">
+							前職不明の中途採用。
+							自己主張強めだけど意外と人見知り。
+							あんずのものはオレのもの。オレのものはオレのもの。
+						</p>
+					</div>
+				</li>
+			</ul>
+		</section>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin-top: 60px;
-	}
-</style>
