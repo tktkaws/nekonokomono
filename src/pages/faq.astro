@@ -1,16 +1,195 @@
 ---
 import Layout from "./layouts/Layout.astro";
-const title = "nekonokomono | Top";
+import Heading from "./components/Heading.astro";
+
+const title = "nekonokomono | FAQ";
 ---
 
 <Layout title={title}>
 	<main>
-		<h1>{title}</h1>
+		<Heading
+			ja="よくあるご質問"
+			en="FAQ"
+			sub01="お客様から寄せられたよくあるご質問をあつめました。"
+			sub02="ご一読いただいても問題が解決しない場合はお問合せフォームからご連絡下さい。"
+		/>
 	</main>
+	<section class="p-faq">
+		<div class="accordion">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-1"
+					>
+						質問テキストが入ります
+						<span class="accordion-icon"></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-1" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-2"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-2" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-3"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-3" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-4"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-4" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-5"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-5" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-6"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-6" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-7"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-7" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-8"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-8" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。回答テキストが入ります。
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button
+						class="accordion-trigger"
+						aria-expanded="false"
+						aria-controls="accordion-panel-9"
+					>
+						質問テキストが入ります<span class="accordion-icon"
+						></span>
+					</button>
+				</h2>
+				<div id="accordion-panel-9" class="accordion-panel __close">
+					<p class="accordion-panel__text">
+						テキストが入ります。テキストが入ります。テキストが入ります。
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
 
-<style>
-	main {
-		margin-top: 60px;
-	}
-</style>
+<script>
+	const triggers = document.querySelectorAll(".accordion-trigger");
+	triggers.forEach((trigger) => {
+		const controls = trigger.getAttribute("aria-controls");
+		const panel = document.getElementById(controls);
+
+		trigger.addEventListener("click", (e) => {
+			const target = e.currentTarget;
+			const isOpen = target.getAttribute("aria-expanded") === "true";
+
+			if (isOpen) {
+				target.setAttribute("aria-expanded", "false");
+				panel.classList.add("__close");
+			} else {
+				target.setAttribute("aria-expanded", "true");
+				panel.classList.remove("__close");
+			}
+		});
+	});
+</script>

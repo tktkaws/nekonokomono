@@ -1,0 +1,122 @@
+@use "../../foundation/global" as *;
+
+.p-faq {
+    display: grid;
+    grid-template-columns: 1fr 1084px 1fr;
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    @media only screen and (max-width: 1184px) {
+        grid-template-columns: 1fr 90% 1fr;
+    }
+
+    &>* {
+        grid-column: 2;
+    }
+}
+
+.accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+// .accordion>*+* {
+//     border-top: 1px solid #a3a3a3;
+// }
+
+.accordion-header {
+    position: relative;
+    background-color: $c-main;
+    height: 60px;
+}
+
+.accordion-trigger {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding-inline: 1rem;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordion-trigger::before {
+    content: "Q";
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 40px;
+    font-weight: bold;
+    color: $c-secondary-lighter;
+}
+
+.accordion-icon {
+    position: relative;
+    // width: 30px;
+    // height: 1px;
+    // transform: rotate(90deg);
+    // background-color: $c-accent;
+    // transition: transform 0.3s ease;
+}
+
+.accordion-icon::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0rem;
+    right: 1rem;
+    bottom: 0;
+    width: 30px;
+    height: 1px;
+    background-color: $c-accent;
+}
+
+.accordion-icon::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0rem;
+    right: 1rem;
+    bottom: 0;
+    width: 30px;
+    height: 1px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    background-color: $c-accent;
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon::after {
+    transform: rotate(0deg);
+}
+
+.accordion-panel.__close {
+    display: none;
+}
+
+.accordion-panel {
+    display: flex;
+    padding-inline: 1rem;
+}
+
+.accordion-panel::before {
+    content: "A";
+    display: inline-block;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+    color: $c-accent;
+    margin-top: 1rem;
+
+}
+
+.accordion-panel__text {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-bottom: 58px;
+    font-size: 16px;
+}
